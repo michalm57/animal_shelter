@@ -4,12 +4,12 @@ namespace Modules\Departments\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Department extends Model
+class Employeee extends Model
 {
     /**
      * @var string
      */
-    protected $table = 'departments';
+    protected $table = 'employees';
 
     /**
      * The attributes that are mass assignable.
@@ -18,5 +18,13 @@ class Department extends Model
      */
     protected $fillable = [
         'name',
+        'first_name',
+        'last_name',
+        'department_id',
     ];
+
+    public function department()
+    {
+        return $this->belongsTo(Department::class, 'department_id', 'id');
+    }
 }
