@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Tasks\Enums;
+namespace Modules\Animals\Enums;
 
 enum AnimalTypeEnum: string
 {

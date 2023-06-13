@@ -4,7 +4,7 @@ namespace Modules\Animal\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Departments\Entities\Employeee;
-use Modules\Tasks\Enums\AnimalTypeEnum;
+use Modules\Animals\Enums\AnimalTypeEnum;
 
 class Animal extends Model
 {
