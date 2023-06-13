@@ -33,4 +33,14 @@ class Employeee extends Model
     {
         return $this->belongsTo(Department::class, 'department_id', 'id');
     }
+
+    /**
+     * Get all id's.
+     *
+     * @return array
+     */
+    public static function getIds(): array
+    {
+        return array_column(self::all()->toArray(), 'id');
+    }
 }
