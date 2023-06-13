@@ -1,0 +1,11 @@
+{
+    "name": "Animals",
+    "alias": "animals",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Animals\\Providers\\AnimalsServiceProvider"
+    ],
+    "files": []
+}
