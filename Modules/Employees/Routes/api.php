@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use Modules\Employees\Http\Controllers\EmployeesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +13,4 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::middleware('auth:api')->get('/employees', function (Request $request) {
-    return $request->user();
-});
+Route::post('/employees/associate', [EmployeesController::class, 'associateEmployeWithAnimal']);
