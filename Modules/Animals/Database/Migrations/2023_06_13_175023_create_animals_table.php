@@ -17,7 +17,7 @@ return new class extends Migration
         Schema::create('animals', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->nullable();
-            $table->enum('name', AnimalTypeEnum::getEnumValues());
+            $table->enum('type_of_animal', AnimalTypeEnum::getEnumValues());
             $table->unsignedBigInteger('employee_id')->nullable();
             $table->timestamps();
 
