@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use Modules\Animals\Http\Controllers\AnimalsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +12,4 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::middleware('auth:api')->get('/animals', function (Request $request) {
-    return $request->user();
-});
+Route::apiResource('animals', AnimalsController::class);
